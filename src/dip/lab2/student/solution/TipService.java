@@ -19,8 +19,8 @@ public class TipService {
 
     }
 
-    public void setTipInfo(double tipPercent) {
-        tip.setPercent(tipPercent);
+    public void setTipPercent(double tipPercent) {
+        tip.setTipPercent(tipPercent);
     }
 
     public double calculateTip() {

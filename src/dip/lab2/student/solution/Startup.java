@@ -11,15 +11,28 @@ public class Startup {
 
     public static void main(String[] args) {
         double billAmount;
+        int bagCount;
+        ServiceQuality q;
+        
         Scanner keyboard = new Scanner(System.in);
 
         TipStrategy tip = new FoodServiceTipCalculator();
-        tip = new BaggageServiceTipCalculator();
+        
         
         System.out.println("How much was the restaurant bill?");
         billAmount = keyboard.nextDouble();
         tip.setBillAmount(billAmount);
-        System.out.println(tip.getBillAmount());
+        System.out.println("What was your quality of service?");
+        
+        
+        
+        BaggageServiceTipCalculator bag = new BaggageServiceTipCalculator();
+        System.out.println("How many bags do you have?");
+                bagCount = keyboard.nextInt();
+        bag.setBagCount(bagCount);
+        System.out.println("What was your quality of service?");
+//        q = keyboard.nextLine();
+        
 
     }
 
